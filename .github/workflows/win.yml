@@ -9,9 +9,11 @@ jobs:
     - uses: actions/checkout@master
     - name: build testapp
       run: |
-        dir "%PROGRAMFILES%\Microsoft Visual Studio\2022\Enterprise\"
         call "%PROGRAMFILES%\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
         cd testapp
-        cl.exe /Od /Zi testapp.c
+        cl.exe /nologo /Od /Zi testapp.c
         cd ..
       shell: cmd
+    - name: run
+        testapp\testapp.exe -t 5
+

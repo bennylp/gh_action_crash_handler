@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #ifdef _MSC_VER
@@ -10,11 +11,6 @@ static void sleep(int sec)
 }
 #else
 #include <unistd.h>
-
-static void sleep(int sec)
-{
-    usleep(sec*1000000);
-}
 #endif
 
 

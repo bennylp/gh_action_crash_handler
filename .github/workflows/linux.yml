@@ -16,3 +16,5 @@ jobs:
         cd testapp
         gcc -o testapp -O0 -g testapp.c
         cd ..
+    - name: run
+        testapp/testapp -t 5
