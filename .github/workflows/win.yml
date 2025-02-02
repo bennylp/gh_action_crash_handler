@@ -15,5 +15,5 @@ jobs:
         cd ..
       shell: cmd
     - name: run
-        testapp\testapp.exe -t 5
+      run: testapp\testapp.exe -t 5
 

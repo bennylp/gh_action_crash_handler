@@ -1,10 +1,6 @@
 name: Linux Demo
 on:
-  push:
-    branches:
-      - 'main'
-  pull_request:
-    types: [opened, synchronize, reopened]
+  push
 jobs:
   success-case:
     runs-on: ubuntu-latest
@@ -17,4 +13,4 @@ jobs:
         gcc -o testapp -O0 -g testapp.c
         cd ..
     - name: run
-        testapp/testapp -t 5
+      run: testapp/testapp -t 5
